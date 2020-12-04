@@ -122,7 +122,7 @@ body {
 
 @media screen and (max-width: 800px) {
   .main_container {
-    margin: 150px auto;
+    margin: auto;
     width: 320px;
     height: 500px;
     display: grid;
