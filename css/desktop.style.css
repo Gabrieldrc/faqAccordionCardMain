@@ -4,12 +4,12 @@ body {
   font-family: 'Kumbh Sans', sans-serif;
   color: hsl(238, 29%, 16%);
   font-size: 12px;
+  background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 .body_content {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   display: grid;
   grid-column: auto;
   justify-content: center;
@@ -17,11 +17,11 @@ body {
 }
 
 .main_container {
-  width: 800px;
-  height: 400px;
+  width: 750px;
+  height: 350px;
   background-color: white;
   border-radius: 15px;
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 50% 50%;
 }
 .content_box {
@@ -37,31 +37,43 @@ body {
 .faq_container {
   margin: 40px 0px;
   padding: 0px;
-  /* background-color: tomato; */
 }
 
 #main_image {
   position: absolute;
-  left: -60px;
-  width: 400px;
-  align-self: center;
+  left: 0px;
+  top: 40px;
   z-index: 2;
 }
 
+#main_image img {
+  height: 280px;
+  margin-left: -50px;
+}
+
 #box_image {
-  width: 130px;
   position: absolute;
-  top: 45%;
-  left: -55px;
+  left: 0px;
   z-index: 3;
+}
+
+#box_image img{
+  margin-left: -50%;
+  margin-top: 150px;
+  width: 140px;
 }
 
 #pattern_image {
   position: absolute;
-  left: -60px;
-  bottom: 0px;
-  width: 400px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
   z-index: 1;
+}
+
+#pattern_image img{
+  width: 100%;
+  margin-left: -15%;
 }
 
 .question_box {
@@ -106,4 +118,58 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 800px) {
+  .main_container {
+    margin: auto;
+    width: 320px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto;
+  }
+  .content_box {
+    padding: 30px;
+  }
+  .image_container {
+    align-content: initial;
+    justify-content: center;
+  }
+  #main_image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #main_image img {
+    width: 300px;
+    height: auto;
+    margin-top: -40%;
+  }
+  #pattern_image {
+    width: 320px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  #pattern_image {
+    width: 230px;
+    margin-bottom: -20px;
+    margin-left: 40px;
+  }
+  #box_image {
+    display: none;
+  }
+  .question_box {
+    width: 100%;
+  }
+  .title {
+    margin: auto;
+  }
 }

@@ -17,9 +17,20 @@
     <div>
       <div class="main_container">
         <div class="image_container">
-          <img id="box_image" src="./images/illustration-box-desktop.svg" alt="box"/>
-          <img id="main_image" src="./images/illustration-woman-online-desktop.svg" alt="base_image"/>
-          <img id="pattern_image" src="./images/bg-pattern-desktop.svg" alt="pattern_image"/>
+          <picture  id="box_image">
+            <source srcset="./images/illustration-box-desktop.svg" media="(max-width: 800px)"/>
+            <img src="./images/illustration-box-desktop.svg" alt="box"/>
+          </picture>
+          <picture id="main_image" >
+            <source srcset="./images/illustration-woman-online-mobile.svg" media="(max-width: 800px)"/>
+            <source srcset="./images/illustration-woman-online-desktop.svg"/>
+            <img src="./images/illustration-woman-online-desktop.svg" alt="base_image"/>
+          </picture>
+          <picture id="pattern_image">
+            <source srcset="./images/bg-pattern-mobile.svg" media="(max-width: 800px)"/>
+            <source srcset="./images/bg-pattern-desktop.svg"/>
+            <img src="./images/bg-pattern-desktop.svg" alt="pattern_image"/>
+          </picture>
         </div>
         <div class="content_box ">
           <h1 class="title bold">FAQ</h1>
