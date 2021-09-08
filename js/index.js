@@ -1,13 +1,16 @@
+const faq = document.getElementById("faq")
+
 function questionOnClick(element) {
   let [ arrow, question, answer ] = element.children;
-  if (answer.style.display == "none" || answer.style.display == "") {
-    arrow.style.borderWidth = "0px 3px 3px 0px";
-    answer.style.display = "block";
-    question.style.color = "hsl(238, 29%, 16%)";
+  if (!isAnswerDisplayed(answer)) {
+    hideAllAnswers(faq)
+    turnArrowUp(arrow)
+    displayAnswer(answer)
+    colorQuestionDark(question)
   } else {
-    arrow.style.borderWidth = "3px 0px 0px 3px";
-    answer.style.display = "none";
-    question.style.color = "hsl(237, 12%, 33%)";
+    turnArrowDown(arrow)
+    hideAnswer(answer)
+    colorQuestionLight(question)
   }
 }
 

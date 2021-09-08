@@ -35,7 +35,7 @@ body {
 }
 
 .faq_container {
-  margin: 40px 0px;
+  margin: 10px 0px 40px;
   padding: 0px;
 }
 
@@ -171,5 +171,8 @@ body {
   }
   .title {
     margin: auto;
+  }
+  .faq_container {
+    margin: 40px 0px;
   }
 }
