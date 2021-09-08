@@ -8,9 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | FAQ Accordion Card</title>
-  <script src="./js/index.js"></script>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="./css/desktop.style.css">
+  <script src="./js/util.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="body_content">
@@ -32,9 +31,9 @@
             <img src="./images/bg-pattern-desktop.svg" alt="pattern_image"/>
           </picture>
         </div>
-        <div class="content_box ">
+        <div class="content_box">
           <h1 class="title bold">FAQ</h1>
-          <div class="faq_container">
+          <div class="faq_container" id="faq">
             <div class="question_box" onmouseout="questionOnMouseOut(this)"  onmouseover="questionOnMouseOver(this)" onclick="questionOnClick(this)">
               <i class="arrow"></i>
               <p class="bold question">
@@ -92,5 +91,6 @@
       </div>
     </div>
   </div>
+  <script src="./js/index.js"></script>
 </body>
 </html>
